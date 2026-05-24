@@ -682,6 +682,18 @@ select.form-control option {
     border-top: 3px solid #b45309; /* Bronze */
 }
 
+.place-form-row {
+    display: flex;
+    gap: 15px;
+    align-items: flex-end;
+    margin-bottom: 15px;
+}
+
+.place-form-row .form-group {
+    flex: 1;
+    margin-bottom: 0;
+}
+
 .place-header {
     display: flex;
     justify-content: space-between;

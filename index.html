@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avilora Portal</title>
     <!-- Modern Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
+        rel="stylesheet">
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css?v=2">
@@ -17,7 +19,8 @@
         <!-- Sidebar Navigation -->
         <aside class="sidebar">
             <div class="logo" style="padding: 20px 10px; display: flex; justify-content: center; align-items: center;">
-                <img src="logo png.png" alt="Avilora Sahityotsav" style="max-width: 100%; height: auto; max-height: 80px; object-fit: contain;">
+                <img src="logo png.png" alt="Avilora Sahityotsav"
+                    style="max-width: 100%; height: auto; max-height: 80px; object-fit: contain;">
             </div>
 
             <nav class="nav-links">
@@ -186,19 +189,25 @@
                         </div>
                         <div class="result-entry-container">
                             <!-- Selectors -->
-                            <div class="custom-form mb-4" style="background: rgba(0,0,0,0.2); padding: 20px; border-radius: 12px; border: 1px solid var(--glass-border);">
+                            <div class="custom-form mb-4"
+                                style="background: rgba(0,0,0,0.2); padding: 20px; border-radius: 12px; border: 1px solid var(--glass-border);">
                                 <div class="form-row">
                                     <div class="form-group">
                                         <label>Result Number</label>
-                                        <input type="text" class="form-control" id="result-number-input" placeholder="e.g. Result 1" value="Result 1" tabindex="1">
+                                        <input type="text" class="form-control" id="result-number-input"
+                                            placeholder="e.g. Result 1" value="Result 1" tabindex="1">
                                     </div>
                                     <div class="form-group">
                                         <label>Category</label>
-                                        <input type="text" class="form-control autocomplete-input" id="result-category-select" placeholder="Type to search Category..." tabindex="2" autocomplete="off">
+                                        <input type="text" class="form-control autocomplete-input"
+                                            id="result-category-select" placeholder="Type to search Category..."
+                                            tabindex="2" autocomplete="off">
                                     </div>
                                     <div class="form-group">
                                         <label>Program / Item</label>
-                                        <input type="text" class="form-control autocomplete-input" id="result-program-select" placeholder="Select Category First..." disabled tabindex="3" autocomplete="off">
+                                        <input type="text" class="form-control autocomplete-input"
+                                            id="result-program-select" placeholder="Select Category First..." disabled
+                                            tabindex="3" autocomplete="off">
                                     </div>
                                 </div>
                             </div>
@@ -208,16 +217,24 @@
                                 <div class="place-block place-1">
                                     <div class="place-header">
                                         <h3 class="place-title"><i class="fas fa-trophy"></i> 01 Place</h3>
-                                        <button class="btn btn-sm add-winner-btn" data-place="1"><i class="fas fa-plus"></i> Add Winner</button>
+                                        <div style="display: flex; gap: 10px;">
+                                            <button class="btn btn-sm add-winner-btn" data-place="1"><i
+                                                    class="fas fa-plus"></i> Add Winner</button>
+                                            <button class="btn btn-sm remove-winner-btn" data-place="1"
+                                                style="background: rgba(239, 68, 68, 0.15); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.3);"
+                                                title="Remove Winner"><i class="fas fa-minus"></i></button>
+                                        </div>
                                     </div>
                                     <div class="place-form-row form-row">
                                         <div class="form-group">
                                             <label>Winner Unit</label>
-                                            <input type="text" class="form-control unit-autocomplete" id="entry-unit-1" placeholder="Type to search unit..." tabindex="4" autocomplete="off">
+                                            <input type="text" class="form-control unit-autocomplete" id="entry-unit-1"
+                                                placeholder="Type to search unit..." tabindex="4" autocomplete="off">
                                         </div>
                                         <div class="form-group">
                                             <label>Student Name</label>
-                                            <input type="text" class="form-control" id="entry-name-1" placeholder="Enter name" tabindex="5">
+                                            <input type="text" class="form-control" id="entry-name-1"
+                                                placeholder="Enter name" tabindex="5">
                                         </div>
                                     </div>
                                 </div>
@@ -226,16 +243,24 @@
                                 <div class="place-block place-2">
                                     <div class="place-header">
                                         <h3 class="place-title"><i class="fas fa-trophy"></i> 02 Place</h3>
-                                        <button class="btn btn-sm add-winner-btn" data-place="2"><i class="fas fa-plus"></i> Add Winner</button>
+                                        <div style="display: flex; gap: 10px;">
+                                            <button class="btn btn-sm add-winner-btn" data-place="2"><i
+                                                    class="fas fa-plus"></i> Add Winner</button>
+                                            <button class="btn btn-sm remove-winner-btn" data-place="2"
+                                                style="background: rgba(239, 68, 68, 0.15); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.3);"
+                                                title="Remove Winner"><i class="fas fa-minus"></i></button>
+                                        </div>
                                     </div>
                                     <div class="place-form-row form-row">
                                         <div class="form-group">
                                             <label>Winner Unit</label>
-                                            <input type="text" class="form-control unit-autocomplete" id="entry-unit-2" placeholder="Type to search unit..." tabindex="6" autocomplete="off">
+                                            <input type="text" class="form-control unit-autocomplete" id="entry-unit-2"
+                                                placeholder="Type to search unit..." tabindex="6" autocomplete="off">
                                         </div>
                                         <div class="form-group">
                                             <label>Student Name</label>
-                                            <input type="text" class="form-control" id="entry-name-2" placeholder="Enter name" tabindex="7">
+                                            <input type="text" class="form-control" id="entry-name-2"
+                                                placeholder="Enter name" tabindex="7">
                                         </div>
                                     </div>
                                 </div>
@@ -244,24 +269,33 @@
                                 <div class="place-block place-3">
                                     <div class="place-header">
                                         <h3 class="place-title"><i class="fas fa-trophy"></i> 03 Place</h3>
-                                        <button class="btn btn-sm add-winner-btn" data-place="3"><i class="fas fa-plus"></i> Add Winner</button>
+                                        <div style="display: flex; gap: 10px;">
+                                            <button class="btn btn-sm add-winner-btn" data-place="3"><i
+                                                    class="fas fa-plus"></i> Add Winner</button>
+                                            <button class="btn btn-sm remove-winner-btn" data-place="3"
+                                                style="background: rgba(239, 68, 68, 0.15); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.3);"
+                                                title="Remove Winner"><i class="fas fa-minus"></i></button>
+                                        </div>
                                     </div>
                                     <div class="place-form-row form-row">
                                         <div class="form-group">
                                             <label>Winner Unit</label>
-                                            <input type="text" class="form-control unit-autocomplete" id="entry-unit-3" placeholder="Type to search unit..." tabindex="8" autocomplete="off">
+                                            <input type="text" class="form-control unit-autocomplete" id="entry-unit-3"
+                                                placeholder="Type to search unit..." tabindex="8" autocomplete="off">
                                         </div>
                                         <div class="form-group">
                                             <label>Student Name</label>
-                                            <input type="text" class="form-control" id="entry-name-3" placeholder="Enter name" tabindex="9">
+                                            <input type="text" class="form-control" id="entry-name-3"
+                                                placeholder="Enter name" tabindex="9">
                                         </div>
                                     </div>
                                 </div>
-                                
-                                
+
+
                             </div>
 
-                            <button type="button" class="btn save-all-btn mt-4"><i class="fas fa-save"></i> Save All Results</button>
+                            <button type="button" class="btn save-all-btn mt-4"><i class="fas fa-save"></i> Save All
+                                Results</button>
                         </div>
                     </div>
 
@@ -269,7 +303,8 @@
                     <div id="manage-units" class="admin-tab glass-panel hidden">
                         <div class="tab-header">
                             <h2><i class="fas fa-users-cog"></i> Manage Units</h2>
-                            <button id="add-unit-btn" class="btn btn-sm btn-primary"><i class="fas fa-plus"></i> Add Unit</button>
+                            <button id="add-unit-btn" class="btn btn-sm btn-primary"><i class="fas fa-plus"></i> Add
+                                Unit</button>
                         </div>
                         <div class="table-responsive">
                             <table class="custom-table">
@@ -289,12 +324,14 @@
 
                     <!-- Poster Setup Tab -->
                     <div id="poster-setup" class="admin-tab hidden">
-                        
+
                         <!-- Settings Sidebar -->
-                        <div id="element-properties-panel" class="glass-panel" style="flex: 0 0 300px; padding: 20px; display: flex; flex-direction: column; gap: 15px;">
+                        <div id="element-properties-panel" class="glass-panel"
+                            style="flex: 0 0 300px; padding: 20px; display: flex; flex-direction: column; gap: 15px;">
                             <h3><i class="fas fa-sliders-h"></i> Properties</h3>
-                            <p style="font-size: 12px; color: #aaa; margin-top:-5px;">Click any text on the poster to edit it here.</p>
-                            
+                            <p style="font-size: 12px; color: #aaa; margin-top:-5px;">Click any text on the poster to
+                                edit it here.</p>
+
                             <div class="form-group" style="margin-bottom: 0;">
                                 <label style="font-size: 13px; color: #ddd;">Font Family</label>
                                 <select id="prop-font" class="form-control form-control-sm">
@@ -313,29 +350,36 @@
                                 </div>
                                 <div style="flex: 1;">
                                     <label style="font-size: 13px; color: #ddd;">Color</label>
-                                    <input type="color" id="prop-color" class="form-control form-control-sm" style="height: 31px; padding: 2px;">
+                                    <input type="color" id="prop-color" class="form-control form-control-sm"
+                                        style="height: 31px; padding: 2px;">
                                 </div>
                             </div>
 
                             <div class="form-group" style="margin-bottom: 0;">
                                 <label style="font-size: 13px; color: #ddd;">Scale</label>
-                                <input type="range" id="prop-scale" min="0.5" max="3" step="0.1" value="1" style="width: 100%;">
+                                <input type="range" id="prop-scale" min="0.5" max="3" step="0.1" value="1"
+                                    style="width: 100%;">
                             </div>
 
                             <div class="form-group" style="margin-bottom: 0;">
                                 <label style="font-size: 13px; color: #ddd;">Alignment</label>
                                 <div style="display: flex; gap: 5px;">
-                                    <button class="btn btn-sm btn-secondary" style="flex: 1;" id="prop-align-left"><i class="fas fa-align-left"></i></button>
-                                    <button class="btn btn-sm btn-secondary" style="flex: 1;" id="prop-align-center"><i class="fas fa-align-center"></i></button>
-                                    <button class="btn btn-sm btn-secondary" style="flex: 1;" id="prop-align-right"><i class="fas fa-align-right"></i></button>
+                                    <button class="btn btn-sm btn-secondary" style="flex: 1;" id="prop-align-left"><i
+                                            class="fas fa-align-left"></i></button>
+                                    <button class="btn btn-sm btn-secondary" style="flex: 1;" id="prop-align-center"><i
+                                            class="fas fa-align-center"></i></button>
+                                    <button class="btn btn-sm btn-secondary" style="flex: 1;" id="prop-align-right"><i
+                                            class="fas fa-align-right"></i></button>
                                 </div>
                             </div>
 
                             <div class="form-group" style="margin-bottom: 0;">
                                 <label style="font-size: 13px; color: #ddd;">Font Variants</label>
                                 <div style="display: flex; gap: 5px;">
-                                    <button class="btn btn-sm btn-secondary" style="flex: 1;" id="prop-bold"><i class="fas fa-bold"></i></button>
-                                    <button class="btn btn-sm btn-secondary" style="flex: 1;" id="prop-italic"><i class="fas fa-italic"></i></button>
+                                    <button class="btn btn-sm btn-secondary" style="flex: 1;" id="prop-bold"><i
+                                            class="fas fa-bold"></i></button>
+                                    <button class="btn btn-sm btn-secondary" style="flex: 1;" id="prop-italic"><i
+                                            class="fas fa-italic"></i></button>
                                 </div>
                             </div>
 
@@ -344,82 +388,128 @@
                             <div class="form-group" style="margin-bottom: 0;">
                                 <label style="font-size: 13px; color: #ddd;">Global Options</label>
                                 <input type="file" id="bg-upload" accept="image/*" style="display: none;">
-                                <button class="btn btn-secondary w-100" style="margin-bottom: 10px;" onclick="document.getElementById('bg-upload').click()"><i class="fas fa-image"></i> Change Background</button>
-                                <button class="btn btn-secondary w-100" id="prop-reset"><i class="fas fa-undo"></i> Reset Positions</button>
+                                <button class="btn btn-secondary w-100" style="margin-bottom: 10px;"
+                                    onclick="document.getElementById('bg-upload').click()"><i class="fas fa-image"></i>
+                                    Change Background</button>
+                                <button class="btn btn-secondary w-100" id="prop-reset"><i class="fas fa-undo"></i>
+                                    Reset Positions</button>
                             </div>
                         </div>
 
                         <!-- Poster Preview Area -->
-                        <div class="glass-panel" style="flex: 1; padding: 20px; display: flex; flex-direction: column; overflow: hidden;">
-                            <div class="tab-header" style="margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center;">
+                        <div class="glass-panel"
+                            style="flex: 1; padding: 20px; display: flex; flex-direction: column; overflow: hidden;">
+                            <div class="tab-header"
+                                style="margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center;">
                                 <div>
                                     <h2><i class="fas fa-paint-brush"></i> Generated Poster</h2>
                                 </div>
                                 <div style="display: flex; gap: 10px;">
-                                    <button class="btn btn-sm btn-primary" onclick="document.getElementById('poster-canvas-wrapper').classList.toggle('zoomed-out')"><i class="fas fa-search-minus"></i> Toggle Zoom</button>
-                                    <button id="download-poster-btn" class="btn btn-sm btn-success"><i class="fas fa-download"></i> Download JPG</button>
+                                    <button class="btn btn-sm btn-primary"
+                                        onclick="document.getElementById('poster-canvas-wrapper').classList.toggle('zoomed-out')"><i
+                                            class="fas fa-search-minus"></i> Toggle Zoom</button>
+                                    <button id="download-poster-btn" class="btn btn-sm btn-success"><i
+                                            class="fas fa-download"></i> Download JPG</button>
                                 </div>
                             </div>
 
                             <style>
-                                .zoomed-out #poster-canvas { transform: scale(0.5); transform-origin: top center; margin-bottom: -675px; }
+                                .zoomed-out #poster-canvas {
+                                    transform: scale(0.5);
+                                    transform-origin: top center;
+                                    margin-bottom: -675px;
+                                }
                             </style>
-                            <div class="preview-section" id="poster-canvas-wrapper" style="display: flex; justify-content: center; padding: 20px; overflow-x: auto; background: #111; border-radius: 8px;">
-                            
-                            <div class="poster-preview" id="poster-canvas" style="position: relative; width: 1080px; height: 1350px; min-width: 1080px; background-image: url('copy.jpg'); background-color: #1a4d5c; background-size: cover; background-position: center; border-radius: 0; box-shadow: 0 10px 30px rgba(0,0,0,0.8); overflow: hidden; font-family: 'Poppins', sans-serif; text-align: left; transition: transform 0.3s ease;">
-                                
-                                <!-- Left Side -->
-                                <div style="position: absolute; left: 190px; top: 561px; display: flex; flex-direction: column;">
-                                    <div class="editable-element" style="font-family: 'Poppins', sans-serif; font-size: 28px; color: #ffffff; font-weight: 400; line-height: 1; cursor: move;" id="poster-result-label">Result 1</div>
-                                    <div class="editable-element" style="font-family: 'Poppins', sans-serif; font-size: 20px; color: #ffffff; font-weight: 400; margin-top: -2px; line-height: 1; cursor: move;" id="poster-category">Lower Primary</div>
-                                    <div class="editable-element" style="font-family: 'Poppins', sans-serif; font-size: 48px; color: #a3e635; font-weight: 600; margin-top: 25px; text-transform: uppercase; line-height: 1; max-width: 400px; word-wrap: break-word; cursor: move;" id="poster-program">MALAYALAM SPEECH</div>
-                                </div>
+                            <div class="preview-section" id="poster-canvas-wrapper"
+                                style="display: flex; justify-content: center; padding: 20px; overflow-x: auto; background: #111; border-radius: 8px;">
 
-                                <!-- Right Side -->
-                                <div style="position: absolute; left: 630px; top: 523px; display: flex; flex-direction: column; align-items: flex-start;" id="poster-winners-list">
-                                    
-                                    <!-- 1st Place Container -->
-                                    <div id="poster-place-1-container" style="width: 100%;">
-                                        <div class="poster-winner-row editable-element" style="display: flex; flex-direction: column; text-align: left; font-family: 'Poppins', sans-serif; cursor: move;">
-                                            <div style="font-family: 'Poppins', sans-serif; font-size: 36px; color: #fff; display: flex; align-items: baseline; justify-content: flex-start; line-height: 1;"><span style="font-family: 'Poppins', sans-serif; font-weight: 400; width: 45px; display: inline-block;">1.</span> <span class="p-name" id="poster-name-1" style="font-family: 'Poppins', sans-serif; font-weight: 600;">Name</span></div>
-                                            <div style="font-family: 'Poppins', sans-serif; font-size: 16px; color: #fff; font-weight: 400; margin-top: 0px; text-align: left; padding-left: 45px; line-height: 1;" class="p-unit" id="poster-unit-1">Unit</div>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- 2nd Place Container -->
-                                    <div id="poster-place-2-container" style="margin-top: 30px; width: 100%;">
-                                        <div class="poster-winner-row editable-element" style="display: flex; flex-direction: column; text-align: left; font-family: 'Poppins', sans-serif; cursor: move;">
-                                            <div style="font-family: 'Poppins', sans-serif; font-size: 36px; color: #fff; display: flex; align-items: baseline; justify-content: flex-start; line-height: 1;"><span style="font-family: 'Poppins', sans-serif; font-weight: 400; width: 45px; display: inline-block;">2.</span> <span class="p-name" id="poster-name-2" style="font-family: 'Poppins', sans-serif; font-weight: 600;">Name</span></div>
-                                            <div style="font-family: 'Poppins', sans-serif; font-size: 16px; color: #fff; font-weight: 400; margin-top: 0px; text-align: left; padding-left: 45px; line-height: 1;" class="p-unit" id="poster-unit-2">Unit</div>
-                                        </div>
+                                <div class="poster-preview" id="poster-canvas"
+                                    style="position: relative; width: 1080px; height: 1350px; min-width: 1080px; background-image: url('copy.jpg'); background-color: #1a4d5c; background-size: cover; background-position: center; border-radius: 0; box-shadow: 0 10px 30px rgba(0,0,0,0.8); overflow: hidden; font-family: 'Poppins', sans-serif; text-align: left; transition: transform 0.3s ease;">
+
+                                    <!-- Left Side -->
+                                    <div
+                                        style="position: absolute; left: 190px; top: 561px; display: flex; flex-direction: column;">
+                                        <div class="editable-element"
+                                            style="font-family: 'Poppins', sans-serif; font-size: 28px; color: #ffffff; font-weight: 400; line-height: 1; cursor: move;"
+                                            id="poster-result-label">Result 1</div>
+                                        <div class="editable-element"
+                                            style="font-family: 'Poppins', sans-serif; font-size: 20px; color: #ffffff; font-weight: 400; margin-top: -2px; line-height: 1; cursor: move;"
+                                            id="poster-category">Lower Primary</div>
+                                        <div class="editable-element"
+                                            style="font-family: 'Poppins', sans-serif; font-size: 48px; color: #a3e635; font-weight: 600; margin-top: 25px; text-transform: uppercase; line-height: 1; max-width: 400px; word-wrap: break-word; cursor: move;"
+                                            id="poster-program">MALAYALAM SPEECH</div>
                                     </div>
 
-                                    <!-- 3rd Place Container -->
-                                    <div id="poster-place-3-container" style="margin-top: 30px; width: 100%;">
-                                        <div class="poster-winner-row editable-element" style="display: flex; flex-direction: column; text-align: left; font-family: 'Poppins', sans-serif; cursor: move;">
-                                            <div style="font-family: 'Poppins', sans-serif; font-size: 36px; color: #fff; display: flex; align-items: baseline; justify-content: flex-start; line-height: 1;"><span style="font-family: 'Poppins', sans-serif; font-weight: 400; width: 45px; display: inline-block;">3.</span> <span class="p-name" id="poster-name-3" style="font-family: 'Poppins', sans-serif; font-weight: 600;">Name</span></div>
-                                            <div style="font-family: 'Poppins', sans-serif; font-size: 16px; color: #fff; font-weight: 400; margin-top: 0px; text-align: left; padding-left: 45px; line-height: 1;" class="p-unit" id="poster-unit-3">Unit</div>
-                                        </div>
-                                    </div>
+                                    <!-- Right Side -->
+                                    <div style="position: absolute; left: 630px; top: 523px; display: flex; flex-direction: column; align-items: flex-start;"
+                                        id="poster-winners-list">
 
+                                        <!-- 1st Place Container -->
+                                        <div id="poster-place-1-container" style="width: 100%;">
+                                            <div class="poster-winner-row editable-element"
+                                                style="display: flex; flex-direction: column; text-align: left; font-family: 'Poppins', sans-serif; cursor: move;">
+                                                <div
+                                                    style="font-family: 'Poppins', sans-serif; font-size: 36px; color: #fff; display: flex; align-items: baseline; justify-content: flex-start; line-height: 1;">
+                                                    <span
+                                                        style="font-family: 'Poppins', sans-serif; font-weight: 400; width: 45px; display: inline-block;">1.</span>
+                                                    <span class="p-name" id="poster-name-1"
+                                                        style="font-family: 'Poppins', sans-serif; font-weight: 600;">Name</span>
+                                                </div>
+                                                <div style="font-family: 'Poppins', sans-serif; font-size: 16px; color: #fff; font-weight: 400; margin-top: 0px; text-align: left; padding-left: 45px; line-height: 1;"
+                                                    class="p-unit" id="poster-unit-1">Unit</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- 2nd Place Container -->
+                                        <div id="poster-place-2-container" style="margin-top: 30px; width: 100%;">
+                                            <div class="poster-winner-row editable-element"
+                                                style="display: flex; flex-direction: column; text-align: left; font-family: 'Poppins', sans-serif; cursor: move;">
+                                                <div
+                                                    style="font-family: 'Poppins', sans-serif; font-size: 36px; color: #fff; display: flex; align-items: baseline; justify-content: flex-start; line-height: 1;">
+                                                    <span
+                                                        style="font-family: 'Poppins', sans-serif; font-weight: 400; width: 45px; display: inline-block;">2.</span>
+                                                    <span class="p-name" id="poster-name-2"
+                                                        style="font-family: 'Poppins', sans-serif; font-weight: 600;">Name</span>
+                                                </div>
+                                                <div style="font-family: 'Poppins', sans-serif; font-size: 16px; color: #fff; font-weight: 400; margin-top: 0px; text-align: left; padding-left: 45px; line-height: 1;"
+                                                    class="p-unit" id="poster-unit-2">Unit</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- 3rd Place Container -->
+                                        <div id="poster-place-3-container" style="margin-top: 30px; width: 100%;">
+                                            <div class="poster-winner-row editable-element"
+                                                style="display: flex; flex-direction: column; text-align: left; font-family: 'Poppins', sans-serif; cursor: move;">
+                                                <div
+                                                    style="font-family: 'Poppins', sans-serif; font-size: 36px; color: #fff; display: flex; align-items: baseline; justify-content: flex-start; line-height: 1;">
+                                                    <span
+                                                        style="font-family: 'Poppins', sans-serif; font-weight: 400; width: 45px; display: inline-block;">3.</span>
+                                                    <span class="p-name" id="poster-name-3"
+                                                        style="font-family: 'Poppins', sans-serif; font-weight: 600;">Name</span>
+                                                </div>
+                                                <div style="font-family: 'Poppins', sans-serif; font-size: 16px; color: #fff; font-weight: 400; margin-top: 0px; text-align: left; padding-left: 45px; line-height: 1;"
+                                                    class="p-unit" id="poster-unit-3">Unit</div>
+                                            </div>
+                                        </div>
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Manage Gallery Tab -->
-                    <div id="manage-gallery" class="admin-tab glass-panel hidden">
-                        <div class="tab-header">
-                            <h2><i class="fas fa-photo-video"></i> Manage Gallery</h2>
-                        </div>
-                        <div class="upload-area">
-                            <i class="fas fa-cloud-upload-alt"></i>
-                            <h3>Drag & Drop Images Here</h3>
-                            <p>or click to browse</p>
-                            <button class="btn btn-secondary mt-2">Select Files</button>
+                        <!-- Manage Gallery Tab -->
+                        <div id="manage-gallery" class="admin-tab glass-panel hidden">
+                            <div class="tab-header">
+                                <h2><i class="fas fa-photo-video"></i> Manage Gallery</h2>
+                            </div>
+                            <div class="upload-area">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <h3>Drag & Drop Images Here</h3>
+                                <p>or click to browse</p>
+                                <button class="btn btn-secondary mt-2">Select Files</button>
+                            </div>
                         </div>
                     </div>
-                </div>
             </section>
         </main>
     </div>

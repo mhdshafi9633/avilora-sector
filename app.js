@@ -163,17 +163,47 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         {
+            name: "General",
+            items: [
+                "122. Spot Magazine", "123. Duff", "124. Arabana", "125. Group Song A",
+                "126. Group Song B", "127. Moulid Parayanam", "128. Qaseeda Parayanam", "129. Viplavaganam",
+                "130. Wall Painting", "131. Malappattu", "132. Risala Quiz", "133. Qawwali",
+                "134. Viplavagana Rachana", "135. Mappilappattu Rachana", "136. Social Story", "137. Project",
+                "138. Collage", "139. Nasheeda", "140. Family Magazine"
+            ]
+        },
+        {
             name: "Campus",
             items: [
                 "141. Mappilappattu", "142. Madh'h Ganam", "143. Malayalam Speech", "144. English Speech",
                 "145. Malayalam Essay", "146. English Essay", "147. Malayalam Story Writing",
-                "148. Malayalam Poem Writing", "149. English Poem Writing"
+                "148. Malayalam Poem Writing", "149. English Poem Writing", "150. Pencil Drawing",
+                "151. Watercolor Painting", "152. Quiz", "153. Book Test", "154. E-Poster",
+                "155. Vlog", "156. Top Comment", "157. Political Debate", "158. Campus Magazine",
+                "159. DPR Presentation", "160. Capture the Flag", "161. Language Pro", "162. Online Quiz",
+                "163. AI Prompting", "164. Ideathon", "165. Market Masters", "166. Book Tale"
+            ]
+        },
+        {
+            name: "Girls",
+            items: [
+                "167. Malayalam Essay", "168. English Essay", "169. Malayalam Story Writing", "170. English Story Writing",
+                "171. Malayalam Poem Writing", "172. English Poem Writing", "173. Pencil Drawing", "174. Watercolor Painting",
+                "175. Arabic Calligraphy", "176. Online Book Test", "177. Online Quiz"
+            ]
+        },
+        {
+            name: "Campus Girls",
+            items: [
+                "178. Malayalam Essay", "179. English Essay", "180. Malayalam Story Writing", "181. English Story Writing",
+                "182. Malayalam Poem Writing", "183. English Poem Writing", "184. Pencil Drawing", "185. Watercolor Painting",
+                "186. Arabic Calligraphy", "187. Online Book Test", "188. Online Quiz"
             ]
         }
     ];
     // --- Dynamic Data ---
     let systemUnits = ["Avilora", "Parammal", "Karanikkallu", "Kunnummal", "Karimbarakundu", "Busthanabad", "Parakkandy", "Katharammal"];
-    
+
     // Published Results Array
     let publishedResults = [];
 
@@ -189,14 +219,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                     <div class="category-content">
                         ${category.items.map(item => {
-                            const isPublished = publishedResults.includes(item);
-                            return `
+                const isPublished = publishedResults.includes(item);
+                return `
                             <div class="program-item" style="opacity: ${isPublished ? '1' : '0.6'};">
                                 <i class="${isPublished ? 'fas fa-check-circle' : 'far fa-circle'}" style="color: ${isPublished ? 'var(--success)' : 'var(--text-muted)'};"></i>
                                 <span>${item}</span>
                             </div>
                             `;
-                        }).join('')}
+            }).join('')}
                     </div>
                 </div>
             `;
@@ -411,18 +441,75 @@ document.addEventListener('DOMContentLoaded', () => {
             bindWinnerRow(i, 1);
         }
 
+        // Remove Winner Button Delegation
+        document.querySelectorAll('.place-block').forEach(block => {
+            block.addEventListener('click', (e) => {
+                const removeBtn = e.target.closest('.remove-winner-btn');
+                if (!removeBtn) return;
+
+                e.preventDefault();
+                e.stopPropagation();
+
+                // Get place number from button's data-place or from block class
+                const place = removeBtn.getAttribute('data-place') || 
+                              (block.className.match(/place-(\d)/) || [])[1] || '1';
+
+                const allRows = Array.from(block.querySelectorAll('.place-form-row'));
+                const posterContainer = document.getElementById(`poster-place-${place}-container`);
+
+                if (allRows.length > 1) {
+                    // Multiple rows: remove the last one
+                    allRows[allRows.length - 1].remove();
+                    if (posterContainer) {
+                        const allPosterRows = posterContainer.querySelectorAll('.poster-winner-row');
+                        if (allPosterRows.length > 0) {
+                            allPosterRows[allPosterRows.length - 1].remove();
+                        }
+                    }
+                    if (placeCounts[place] > 1) placeCounts[place]--;
+
+                } else if (allRows.length === 1) {
+                    // Only one row: clear and hide it
+                    const formRow = allRows[0];
+                    formRow.querySelectorAll('input').forEach(inp => inp.value = '');
+                    formRow.style.display = 'none';
+
+                    if (posterContainer) {
+                        const posterRow = posterContainer.querySelector('.poster-winner-row');
+                        if (posterRow) {
+                            const pName = posterRow.querySelector('.p-name');
+                            const pUnit = posterRow.querySelector('.p-unit');
+                            if (pName) pName.textContent = 'Name';
+                            if (pUnit) pUnit.textContent = 'Unit';
+                            posterRow.style.display = 'none';
+                        }
+                    }
+                }
+            });
+        });
+
         // Add Winner Buttons
         const addButtons = document.querySelectorAll('.add-winner-btn');
         addButtons.forEach(btn => {
             btn.addEventListener('click', (e) => {
                 e.preventDefault();
                 const place = btn.getAttribute('data-place');
+                const placeBlock = btn.closest('.place-block');
+                const firstRow = placeBlock.querySelector('.place-form-row');
+                const posterContainer = document.getElementById(`poster-place-${place}-container`);
+                const firstPosterRow = posterContainer.querySelector('.poster-winner-row');
+                
+                // If the first row is hidden, just show it
+                if (firstRow && firstRow.style.display === 'none') {
+                    firstRow.style.display = 'flex';
+                    if (firstPosterRow) firstPosterRow.style.display = 'flex';
+                    return;
+                }
+                
                 placeCounts[place]++;
                 const newIndex = placeCounts[place];
 
                 // Clone Result Entry form row
-                const placeBlock = btn.closest('.place-block');
-                const firstRow = placeBlock.querySelector('.place-form-row');
                 const newRow = firstRow.cloneNode(true);
 
                 // Update IDs and clear values in cloned input
@@ -438,8 +525,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 placeBlock.appendChild(newRow);
 
                 // Clone Poster Row
-                const posterContainer = document.getElementById(`poster-place-${place}-container`);
-                const firstPosterRow = posterContainer.querySelector('.poster-winner-row');
                 const newPosterRow = firstPosterRow.cloneNode(true);
 
                 // Update IDs and clear values in cloned poster row
@@ -450,9 +535,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 newPosterUnit.id = `poster-unit-${place}-${newIndex}`;
                 newPosterUnit.textContent = 'Unit';
 
-                // We don't add top margin to cloned poster row if it's right under the first one?
-                // Wait, the design has them closely stacked if they are tied, maybe 5px margin.
                 newPosterRow.style.marginTop = '10px';
+                newPosterRow.style.display = 'flex';
 
                 posterContainer.appendChild(newPosterRow);
 
